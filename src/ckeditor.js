@@ -32,6 +32,7 @@ import { addListToDropdown, createDropdown } from '@ckeditor/ckeditor5-ui/src/dr
 import Collection from '@ckeditor/ckeditor5-utils/src/collection.js';
 import UIModel from '@ckeditor/ckeditor5-ui/src/model.js';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview.js';
+import FindAndReplace from '@ckeditor/ckeditor5-find-and-replace/src/findandreplace.js';
 
 
 class Context extends BaseContext { }
@@ -54,8 +55,9 @@ Editor.builtinPlugins = [
 	Heading,
 	Image,
 	List,
-	MediaEmbed,
+	// MediaEmbed,
 	PasteFromOffice,
+	FindAndReplace,
 	GeneralHtmlSupport,
 	Link,
 	Bold,
@@ -63,7 +65,7 @@ Editor.builtinPlugins = [
 	Font,
 	Underline,
 	Alignment,
-	ToolbarView
+	ToolbarView,
 ];
 Editor.defaultConfig = {
 	htmlSupport: {
@@ -83,21 +85,12 @@ Editor.defaultConfig = {
 	removePlugins: ['Markdown'],
 };
 
-
-
-
-
 const ClassicEditor = {
 	Editor,
 	Context,
 	BaseCommentThreadView,
 	Template,
 	CommentView,
-	Bold,
-	Italic,
-	Underline,
-	List,
-	Autoformat,
 	Mention,
 	IconView,
 	addListToDropdown,
